@@ -172,7 +172,7 @@ class PatternAnalysisService
 
         ],
 
-        'Head and Shoulders Chart Patterns' => [
+        'Head and Shoulders Chart Pattern' => [
 
             'reliability' => 90,
 
@@ -1506,7 +1506,7 @@ class PatternAnalysisService
 
             'Cup and Handle Chart Pattern',
 
-            'Head and Shoulders Chart Patterns',
+            'Head and Shoulders Chart Pattern',
 
             'Inverse Head and Shoulders Pattern'
 
@@ -2029,7 +2029,7 @@ private function isDowntrend(array $ohlcData, int $lookback = 20): bool
 
                     return [
 
-                        'pattern_name' => 'Head and Shoulders Chart Patterns',
+                        'pattern_name' => 'Head and Shoulders Chart Pattern',
 
                         'success_probability' => $this->safeDecimalCast($patternConfig['reliability']),
 
@@ -3689,7 +3689,7 @@ private function isDowntrend(array $ohlcData, int $lookback = 20): bool
 
                 'Double Bottom Chart Pattern' => fn($data) => $this->detectDoubleBottom($data, $this->patternTypes['Double Bottom Chart Pattern']),
 
-                'Head and Shoulders Chart Patterns' => fn($data) => $this->detectHeadAndShoulders($data, $this->patternTypes['Head and Shoulders Chart Patterns']),
+                'Head and Shoulders Chart Pattern' => fn($data) => $this->detectHeadAndShoulders($data, $this->patternTypes['Head and Shoulders Chart Pattern']),
 
                 'Cup and Handle Chart Pattern' => fn($data) => $this->detectCupAndHandle($data, $this->patternTypes['Cup and Handle Chart Pattern']),
 
