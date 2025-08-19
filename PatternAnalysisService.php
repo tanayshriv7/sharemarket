@@ -1042,7 +1042,7 @@ class PatternAnalysisService
 
      */
 
-    public function detectSureshot(Stock $stock, array $patterns = null): array
+    public function detectSureshot(Stock $stock, ?array $patterns = null): array
 
     {
 
@@ -1372,7 +1372,7 @@ class PatternAnalysisService
 
 
 
-    private function calculateRiskReward(float $return, string $riskLevel): float
+    private function calculateRiskReward(float|string $return, string $riskLevel): float
 
     {
 
