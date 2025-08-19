@@ -1917,8 +1917,11 @@ class PatternAnalysisService
 
 
 /**
- * Check if the stock is in a downtrend
- * A downtrend = lower highs or price slope going down
+ * Determine if the stock is in a downtrend.
+ *
+ * The current implementation performs a linear regression on closing
+ * prices over the provided lookback period and treats a negative slope
+ * as a downtrend. Detection of lower highs is not implemented.
  */
 private function isDowntrend(array $ohlcData, int $lookback = 20): bool
 {
